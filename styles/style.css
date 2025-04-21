@@ -1,0 +1,330 @@
+
+/* @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap'); */
+@font-face {
+    font-family: "Space Grotesk";
+    src: url("../fonts/SpaceGrotesk-Regular.ttf");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: white;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #333;
+}
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    font-weight: normal;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease, border-radius 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: #333;
+    color: white;
+}
+
+.quote-btn {
+    padding: 10px 20px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, border-radius 0.3s ease;
+}
+.quote-btn:hover {
+    background-color: #333;
+    color: white;
+    border-color: #333;
+}
+
+.hero {
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-content {
+    max-width: 500px;
+}
+
+.hero-title {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero-text {
+    font-size: 18px;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.consultation-btn {
+    padding: 15px 30px;
+    background: #1a1a1a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.megaphone-illustration {
+    width: 600px;
+    height: 515px;
+    position: relative;
+}
+
+.megaphone {
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    left: -150px;
+
+}
+.logos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+}
+
+.logo-placeholder {
+    background: none;
+    padding: 0;
+    border: none;
+    margin: 0;
+    height: 30px;
+    padding: 5px 15px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+.logo-image {
+    width: 200%;
+    height: 200%;
+    object-fit: contain;
+    filter: grayscale(100%);
+}
+
+.logo-placeholder:hover .logo-image {
+    filter: grayscale(0%);
+}
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    font-weight: normal;
+    padding: 8px 12px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: #333;
+    color: white;
+    border-radius: 4px;
+}
+
+.quote-btn {
+    padding: 10px 20px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.quote-btn:hover {
+    background-color: #333;
+    color: white;
+    border-color: #333;
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+.underlined {
+    text-decoration: underline; /* Стандартное подчеркивание */
+}
+.footer-main {
+    display: flex;
+    flex-direction: column;
+  
+    margin: 0 auto; /* Автоматические отступы по бокам для центрирования */
+    padding: 55px; /* Добавляем отступы */
+    min-height: 500px; /* Заменяем height на min-height */
+    background-color: #1a1a1a;
+    border-radius: 40px 40px 0 0;
+    gap:0;
+    position: relative;
+    
+}
+
+
+footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #ffffff; /* Цвет фона как на скриншоте */
+    color: white;
+}
+.footer-shapka {
+
+    width: 100%;
+    background-color: #1a1a1a; /* Основной цвет фона */
+    
+    margin: 5; /* Убираем внешние отступы */
+}
+
+
+.footer-content {
+    display: flex;
+    margin-bottom: 50px;
+    align-items: center;
+    
+    gap:194px;
+}
+
+.footer-shapka-left {
+    display: flex;
+    
+    align-items: center;
+    margin-bottom: 66px;
+
+}
+.footer-shapka-left-logo{
+    width: 180px;
+    height: 29px;
+    justify-content: center;
+    align-items: center;
+
+}
+.footer-shapka-center-text{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding-left: 155px;
+}
+
+.footer-shapka-right {
+    display: flex;
+    align-items: right;
+    gap: 20px;
+    padding-left: 155px;
+    justify-content: space-between;
+
+}
+
+
+.footer-left h3 {
+    color: #000000;
+    margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 110px;
+    background-color: #98ff98;
+    border-radius: 5px;
+
+}
+
+.footer-left p {
+    margin: 5px 0;
+    line-height: 1.6;
+    justify-content: center;
+    align-items: center;
+    
+}
+.footer-right {
+    width: 634px;
+    height: 184px;
+    background-color: #292a32;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+}
+
+.footer-right form {
+    display: flex;
+    gap: 15px;
+    width: 80%;
+    align-items: center; /* Выравнивание по центру */
+}
+
+.footer-right input {
+    flex: 1;
+    padding: 16px 20px; /* Увеличенные отступы */
+    border: 1px solid #333;
+    border-radius: 8px; /* Закругление */
+    background-color: #333;
+    color: white;
+    font-size: 18px; /* Крупный текст */
+    height: 50px; /* Фиксированная высота */
+}
+
+.footer-right button {
+    padding: 16px 30px; /* Больше, чем у input */
+    background-color: #98ff98;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    color: black;
+     /* Размер текста как в input */
+    font-weight: bold; /* Жирный шрифт */
+    height: 50px; /* Такая же высота, как у input */
+    white-space: nowrap;
+    transition: background 0.3s; /* Плавный эффект при наведении */
+}
+
+.footer-right button:hover {
+    background-color: #7ae07a; /* Изменение цвета при наведении */
+}
+
+.footer-bottom {
+    display: flex;
+    align-items: center;
+    padding-top: 50px;
+    ;
+    border-top: 1px solid #333;
+    width: 1120px;
+    height: 36px;
+    
+}
+
+.footer-bottom a {
+    color: #98ff98;
+    text-decoration: none;
+    padding-left: 40px;
+}
+.Privacy{
+    padding-left: 40px;
+    text-decoration: underline; /* Стандартное подчеркивание */
+}
