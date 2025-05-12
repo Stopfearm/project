@@ -1802,6 +1802,7 @@ p6 {
     .header-logos {
         display: flex;
         width: 1280px;
+        padding-bottom: 40px;
         justify-content: center;
         align-items: center;
     }
