@@ -1797,8 +1797,8 @@ p6 {
     line-height: 1.5;
 }
 @media (max-width: 768px) {
-    /* Общие стили */
     .header-logos {
+        padding-left: 500px;
         flex-direction: column;
         padding: 20px;
     }
