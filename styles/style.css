@@ -1798,7 +1798,7 @@ p6 {
 }
 @media (max-width: 768px) {
     .header-logos {
-        padding-left: 300px;
+        padding-left: 900px;
         flex-direction: column;
     }
 }
