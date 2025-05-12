@@ -1810,7 +1810,7 @@ body {
 }
 
 /* Стили для мобильных устройств */
-@media (max-width: 768px) {
+@media (max-width: 1206px) {
     /* Шапка */
     .header-logos {
         flex-direction: column;
