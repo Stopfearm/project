@@ -1845,6 +1845,19 @@ body {
         padding-right: 0;
     }
 
+    .hero-title {
+        font-size: 32px;
+    }
+
+    .hero-text {
+        font-size: 16px;
+    }
+
+    .consultation-btn {
+        width: 100%;
+        max-width: 300px;
+    }
+
     .megaphone-illustration {
         width: 100%;
         height: auto;
@@ -1880,9 +1893,16 @@ body {
         padding: 0;
     }
 
+    .services-green, .services-green-2, .services-green-3, .services-green-4, .services-green-5 {
+        width: 100%;
+        max-width: 300px;
+        font-size: 24px;
+    }
+
     .atourd-1, .atourd-2, .atourd-3, .atourd-4, .atourd-5 {
         padding-left: 0;
         width: 100%;
+        font-size: 16px;
     }
 
     /* Карточки услуг */
@@ -1948,6 +1968,10 @@ body {
         margin-top: 0;
     }
 
+    .learn-more {
+        font-size: 16px;
+    }
+
     /* Рабочий процесс */
     .process-container {
         padding: 20px;
@@ -1962,19 +1986,18 @@ body {
     .step-number {
         margin-right: 0;
         margin-bottom: 10px;
-    }
-
-    .step-content {
-        width: 100%;
+        font-size: 32px;
     }
 
     .step-content h3 {
+        font-size: 24px;
         width: 100%;
         padding-right: 0;
         margin-right: 0;
     }
 
     .step-content p {
+        font-size: 16px;
         padding-top: 10px;
     }
 
@@ -2004,14 +2027,29 @@ body {
         margin-top: 10px;
     }
 
+    .member-info h3 {
+        font-size: 24px;
+    }
+
+    .member-info p {
+        font-size: 16px;
+    }
+
     .member-description {
         text-align: center;
         margin-left: 0;
+        font-size: 16px;
     }
 
     /* Кнопка CTA */
     .cta-button-container {
         text-align: center;
+    }
+
+    .cta-button {
+        width: 100%;
+        max-width: 300px;
+        font-size: 16px;
     }
 
     /* Контактная форма */
@@ -2034,6 +2072,13 @@ body {
 
     .form-group input, .form-group.message-group textarea {
         width: 100%;
+        font-size: 16px;
+    }
+
+    .submit-button {
+        width: 100%;
+        max-width: 300px;
+        font-size: 16px;
     }
 
     /* Декоративный элемент */
@@ -2045,4 +2090,59 @@ body {
 
     .contactimg {
         width: 100%;
-        height: auto
+        height: auto;
+    }
+
+    /* Футер */
+    .footer-main {
+        padding: 20px;
+    }
+
+    .footer-shapka-center-text {
+        flex-direction: column;
+        gap: 10px;
+        padding-left: 0;
+        padding-top: 10px;
+        max-width: 100%;
+    }
+
+    .footer-shapka-right {
+        padding-left: 0;
+        justify-content: center;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 20px;
+        max-width: 100%;
+    }
+
+    .footer-left-text {
+        width: 100%;
+    }
+
+    .footer-right {
+        width: 100%;
+        height: auto;
+    }
+
+    .footer-right form {
+        width: 100%;
+        margin-left: 0;
+        padding-right: 0;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 20px;
+        width: 100%;
+        height: auto;
+    }
+
+    .footer-1-str, .footer-2-str {
+        padding-left: 0;
+        text-align: center;
+        font-size: 16px;
+    }
+}
