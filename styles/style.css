@@ -1801,4 +1801,10 @@ p6 {
         padding-left: 900px;
         flex-direction: column;
     }
+    .hero {
+        padding-left: 200px;
+        justify-content: center;
+        align-items: center;
+        gap: 108px;
+    }
 }
