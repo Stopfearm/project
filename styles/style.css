@@ -1,271 +1,3 @@
-/* Существующий CSS код */
-
-@media (max-width: 768px) {
-    /* Общие стили */
-    .header-logos {
-        flex-direction: column;
-        padding: 20px;
-    }
-
-    .nav {
-        flex-direction: column;
-        gap: 10px;
-        padding-left: 0;
-    }
-
-    .hero {
-        flex-direction: column;
-        gap: 20px;
-        padding: 20px;
-    }
-
-    .hero-content {
-        padding-right: 0;
-        text-align: center;
-    }
-
-    .megaphone-illustration {
-        width: 100%;
-        height: auto;
-    }
-
-    .megaphone {
-        left: 0;
-        width: 100%;
-    }
-
-    .logos {
-        flex-wrap: wrap;
-        gap: 20px;
-        padding: 20px;
-    }
-
-    .logo-placeholder {
-        width: 45%;
-    }
-
-    .services-main {
-        padding: 20px;
-    }
-
-    .services-1, .services-2, .services-3, .services-4, .services-5 {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 0;
-    }
-
-    .atourd-1, .atourd-2, .atourd-3, .atourd-4, .atourd-5 {
-        padding-left: 0;
-        width: 100%;
-    }
-
-    .container {
-        grid-template-columns: 1fr;
-        gap: 20px;
-        padding: 20px;
-    }
-
-    .card {
-        width: 100%;
-        height: auto;
-    }
-
-    .card-content {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .card-text {
-        padding-left: 0;
-        padding-bottom: 10px;
-    }
-
-    .card-icon {
-        padding-top: 20px;
-    }
-
-    .learn-more-card, .learn-more-card-white {
-        margin-top: 10px;
-    }
-
-    .containe {
-        flex-direction: column;
-        height: auto;
-        padding: 20px;
-    }
-
-    .visual-element {
-        padding-left: 0;
-        margin-top: 20px;
-    }
-
-    .case-studies-container {
-        padding: 20px;
-    }
-
-    .case-studies-content {
-        flex-direction: column;
-        height: auto;
-        gap: 20px;
-        padding: 20px;
-    }
-
-    .case-study-card, .case-study-card-2, .case-study-card-3 {
-        border-right: none;
-        padding-right: 0;
-        max-width: 100%;
-        height: auto;
-        margin-top: 0;
-    }
-
-    .process-container {
-        padding: 20px;
-    }
-
-    .process-steps .step {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 20px;
-    }
-
-    .step-number {
-        margin-right: 0;
-        margin-bottom: 10px;
-    }
-
-    .step-content {
-        width: 100%;
-    }
-
-    .step-content h3 {
-        width: 100%;
-        padding-right: 0;
-        margin-right: 0;
-    }
-
-    .step-content p {
-        padding-top: 10px;
-    }
-
-    .team-container {
-        padding: 20px;
-    }
-
-    .team-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .team-member {
-        max-width: 100%;
-        height: auto;
-        padding: 20px;
-    }
-
-    .member-top {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .member-info {
-        margin-top: 10px;
-    }
-
-    .member-description {
-        text-align: center;
-        margin-left: 0;
-    }
-
-    .cta-button-container {
-        text-align: center;
-    }
-
-    .contact-container {
-        flex-direction: column;
-        gap: 20px;
-        padding: 20px;
-        height: auto;
-        margin: 0;
-    }
-
-    .form-section {
-        width: 100%;
-        padding-left: 0;
-    }
-
-    .contact-form {
-        width: 100%;
-    }
-
-    .form-group input, .form-group.message-group textarea {
-        width: 100%;
-    }
-
-    .visual-element-contact {
-        width: 100%;
-        height: auto;
-        padding-left: 0;
-    }
-
-    .contactimg {
-        width: 100%;
-        height: auto;
-    }
-
-    .footer-main {
-        padding: 20px;
-    }
-
-    .footer-shapka-center-text {
-        flex-direction: column;
-        gap: 10px;
-        padding-left: 0;
-        padding-top: 10px;
-        max-width: 100%;
-    }
-
-    .footer-shapka-right {
-        padding-left: 0;
-        justify-content: center;
-    }
-
-    .footer-content {
-        flex-direction: column;
-        gap: 20px;
-        max-width: 100%;
-    }
-
-    .footer-left-text {
-        width: 100%;
-    }
-
-    .footer-right {
-        width: 100%;
-        height: auto;
-    }
-
-    .footer-right form {
-        width: 100%;
-        margin-left: 0;
-        padding-right: 0;
-    }
-
-    .footer-bottom {
-        flex-direction: column;
-        align-items: center;
-        padding-top: 20px;
-        width: 100%;
-        height: auto;
-    }
-
-    .footer-1-str, .footer-2-str {
-        padding-left: 0;
-        text-align: center;
-    }
-}
 @font-face {
     font-family: "Space Grotesk";
     src: url("../fonts/SpaceGrotesk-Regular.ttf");
@@ -2063,4 +1795,270 @@ p6 {
     color: #000000;
     font-size: 16px;
     line-height: 1.5;
+}
+@media (max-width: 768px) {
+    /* Общие стили */
+    .header-logos {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .nav {
+        flex-direction: column;
+        gap: 10px;
+        padding-left: 0;
+    }
+
+    .hero {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .hero-content {
+        padding-right: 0;
+        text-align: center;
+    }
+
+    .megaphone-illustration {
+        width: 100%;
+        height: auto;
+    }
+
+    .megaphone {
+        left: 0;
+        width: 100%;
+    }
+
+    .logos {
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .logo-placeholder {
+        width: 45%;
+    }
+
+    .services-main {
+        padding: 20px;
+    }
+
+    .services-1, .services-2, .services-3, .services-4, .services-5 {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0;
+    }
+
+    .atourd-1, .atourd-2, .atourd-3, .atourd-4, .atourd-5 {
+        padding-left: 0;
+        width: 100%;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .card {
+        width: 100%;
+        height: auto;
+    }
+
+    .card-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .card-text {
+        padding-left: 0;
+        padding-bottom: 10px;
+    }
+
+    .card-icon {
+        padding-top: 20px;
+    }
+
+    .learn-more-card, .learn-more-card-white {
+        margin-top: 10px;
+    }
+
+    .containe {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+
+    .visual-element {
+        padding-left: 0;
+        margin-top: 20px;
+    }
+
+    .case-studies-container {
+        padding: 20px;
+    }
+
+    .case-studies-content {
+        flex-direction: column;
+        height: auto;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .case-study-card, .case-study-card-2, .case-study-card-3 {
+        border-right: none;
+        padding-right: 0;
+        max-width: 100%;
+        height: auto;
+        margin-top: 0;
+    }
+
+    .process-container {
+        padding: 20px;
+    }
+
+    .process-steps .step {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    .step-number {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .step-content {
+        width: 100%;
+    }
+
+    .step-content h3 {
+        width: 100%;
+        padding-right: 0;
+        margin-right: 0;
+    }
+
+    .step-content p {
+        padding-top: 10px;
+    }
+
+    .team-container {
+        padding: 20px;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .team-member {
+        max-width: 100%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .member-top {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .member-info {
+        margin-top: 10px;
+    }
+
+    .member-description {
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .cta-button-container {
+        text-align: center;
+    }
+
+    .contact-container {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+        height: auto;
+        margin: 0;
+    }
+
+    .form-section {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .contact-form {
+        width: 100%;
+    }
+
+    .form-group input, .form-group.message-group textarea {
+        width: 100%;
+    }
+
+    .visual-element-contact {
+        width: 100%;
+        height: auto;
+        padding-left: 0;
+    }
+
+    .contactimg {
+        width: 100%;
+        height: auto;
+    }
+
+    .footer-main {
+        padding: 20px;
+    }
+
+    .footer-shapka-center-text {
+        flex-direction: column;
+        gap: 10px;
+        padding-left: 0;
+        padding-top: 10px;
+        max-width: 100%;
+    }
+
+    .footer-shapka-right {
+        padding-left: 0;
+        justify-content: center;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 20px;
+        max-width: 100%;
+    }
+
+    .footer-left-text {
+        width: 100%;
+    }
+
+    .footer-right {
+        width: 100%;
+        height: auto;
+    }
+
+    .footer-right form {
+        width: 100%;
+        margin-left: 0;
+        padding-right: 0;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 20px;
+        width: 100%;
+        height: auto;
+    }
+
+    .footer-1-str, .footer-2-str {
+        padding-left: 0;
+        text-align: center;
+    }
 }
