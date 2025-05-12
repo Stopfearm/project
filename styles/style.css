@@ -27,6 +27,7 @@
 }
 
 
+
 .header-logos {
     display: flex;
     justify-content: center;
@@ -1725,7 +1726,7 @@ p6 {
 }
 .contactimg{
     height: 648px;
-    width: 648px;
+    width: 324px;
     justify-content: right;
 }
 
@@ -1797,14 +1798,89 @@ p6 {
     line-height: 1.5;
 }
 @media (max-width: 768px) {
+    /* Общие стили */
     .header-logos {
-        padding-left: 900px;
-        flex-direction: column;
-    }
-    .hero {
-        padding-left: 200px;
+        display: flex;
+        width: 1280px;
         justify-content: center;
         align-items: center;
-        gap: 108px;
+    }
+    .hero {
+
+        width: 1280px;
+        justify-content: center;
+        align-items: center;
+    }
+    .logo-section{
+        display: flex;
+        width: 1280px;
+        padding: 20px;
+    }
+    .services-main {
+        display: flex;
+        width: 1280px;
+        padding-left: 20px;
+
+    }
+    .container{
+        width: 1280px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .containe{
+        display: flex;
+        margin-left: 20px;
+    }
+    .cta-section{
+        display: flex;
+        width: 1250px;
+    }
+
+    .team-member{
+        margin: 0px;
+    }
+    .team-container{
+        width: 1280px;
+    }
+    .case-studies-content{
+        display: flex;
+        width: 1250px;
+    }
+    .case-studies-container{
+        display: flex;
+        width: 1250px;
+        margin-left: 20px;
+        padding: 0px;
+    }
+    .process-steps .step{
+        display: flex;
+        width: 1250px;
+    }
+    .process-container{
+        display: flex;
+        width: 1250px;
+    }
+    .cta-button-container{
+        display: flex;
+        width: 1250px;
+    }
+    .case-coment-ac{
+        display: flex;
+        width: 1240px;
+        margin: 20px;
+        margin-right: 20px;
+    }
+    .contact-container{
+        display: flex;
+        width: 1250px;
+        margin-left: 20px;
+    }
+    .footer{
+        display: flex;
+        width: 1280px;
+    }
+    .footer-main{
+        display: flex;
+        
     }
 }
