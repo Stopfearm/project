@@ -1884,4 +1884,19 @@ p6 {
         display: flex;
         
     }
+    .menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .nav {
+        display: none; /* Скрыть меню по умолчанию */
+    }
+
+    .nav.active {
+        display: block; /* Показать меню при активации */
+    }
 }
