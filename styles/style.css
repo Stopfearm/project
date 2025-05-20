@@ -47,7 +47,7 @@
 
 .nav {
     display: flex;
-    gap: 30px;
+    gap: 10px;
     align-items: center;
 }
 
@@ -94,6 +94,7 @@
     background-color: #333;
     color: white;
     border-color: #333;
+
 }
 
 .hero {
@@ -101,6 +102,7 @@
     justify-content: center;
     align-items: center;
     gap: 108px;
+
 }
 
 .hero-content {
@@ -217,6 +219,8 @@
     border: 1px solid #333;
     border-radius: 5px;
     cursor: pointer;
+    height: 50px;
+    width: 220px;
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
@@ -628,8 +632,10 @@ footer {
 }
 
 .container {
+    flex-direction:column ;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    --gridColumns: 2;
+    grid-template-columns: repeat(var(--gridColumns), 1fr);
     gap: 35px;
     max-width: 1240px;
     align-items: center;
@@ -638,6 +644,24 @@ footer {
     
 }
 
+.card-text-1-1-cont {
+    width: 220px;
+    font-size: 50px;
+    line-height: 35px;
+    color: #000000;
+    align-items: center;
+    background-color: #b9ff66;
+    border-radius: 8px;
+    font-family: "Space Grotesk";
+    src: url("../fonts/SpaceGrotesk-Medium.ttf");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .card-text-2-1-cont {
     width: 190px;
     font-size: 50px;
@@ -1718,6 +1742,8 @@ p6 {
     width: 556px;
     height: 68px;
 }
+
+
 .visual-element-contact{
     height: 648px;
     width: 324px;
@@ -1735,7 +1761,66 @@ p6 {
     width: 556px;
     height: 68px;
 }
+.btn-login {
+  display: inline-block;
+  margin: 50px auto;
+  padding: 12px 24px;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  border:1px solid #000000;
+  font-family: "Space Grotesk";
+  src: url("../fonts/SpaceGrotesk-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  font-size:20px;
+  height: 50px;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  cursor: pointer;
+}
+.btn-login:hover {
+  background-color: #000000;
+  color: white;
+}
 
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 30px;
+  border-radius: 8px;
+  width: 400px; /* Увеличили ширину */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+form input {
+  width: 100%;
+  padding: 12px;
+  margin: 12px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  font-family: "Space Grotesk";
+    src: url("../fonts/SpaceGrotesk-Regular.ttf");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
 * {
     margin: 0;
     padding: 0;
@@ -1762,6 +1847,14 @@ p6 {
     justify-content: space-between;
     gap: 20px;
 }
+.mobile-str-bg{
+    display: none;
+
+}
+.mobile-str-bw{
+    display: none;
+}
+
 
 .case-card-coment {
     flex: 1;
@@ -1797,106 +1890,404 @@ p6 {
     font-size: 16px;
     line-height: 1.5;
 }
+.mobile-image {
+  display: none; /* Скрыто по умолчанию */
+}
+.burger-btn {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 60px;
+  height: 45px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.burger-line {
+  width: 100%;
+  height: 3px;
+  background-color: #000;
+  border-radius: 2px;
+}
+
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 70px;
+  background-color: white;
+  flex-direction: column;
+  align-items: center;
+  justify-items: right;
+  padding: 20px 0;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: 999;
+}
+
+.mobile-menu.active {
+  display: flex;
+  animation: slideDown 0.3s ease forwards;
+  justify-items: right;
+  border-radius: 10px;
+  background-color: #f7f4f4;
+  width: 500px;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 @media (max-width: 768px) {
     /* Общие стили */
     .header-logos {
         display: flex;
-        width: 1280px;
+        width: 100%px;
+        justify-content: center;
+        align-items: center;
         padding-bottom: 40px;
-        justify-content: center;
-        align-items: center;
     }
-    .hero {
-
-        width: 1280px;
-        justify-content: center;
-        align-items: center;
+    .logos{
+       width: 1280px;
+       height: 200px;
+       flex-wrap: wrap;
+       gap: 100px;
     }
-    .logo-section{
-        display: flex;
-        width: 1280px;
-        padding: 20px;
+    .logo-placeholder{
+        gap: 20px;
     }
-    .services-main {
-        display: flex;
-        width: 1280px;
-        padding-left: 20px;
-
+    .burger-btn {
+    display: flex;
+    
     }
-    .container{
-        width: 1280px;
-        margin-left: 20px;
-        margin-right: 20px;
-    }
-    .containe{
-        display: flex;
-        margin-left: 20px;
-    }
-    .cta-section{
-        display: flex;
-        width: 1250px;
+    .nav {
+    display: none;
     }
 
-    .team-member{
-        margin: 0px;
+    .mobile-menu a,
+    .mobile-menu button {
+    margin: 10px 0;
+    text-align: center;
     }
-    .team-container{
-        width: 1280px;
-    }
-    .case-studies-content{
-        display: flex;
-        width: 1250px;
-    }
-    .case-studies-container{
-        display: flex;
-        width: 1250px;
-        margin-left: 20px;
-        padding: 0px;
-    }
-    .process-steps .step{
-        display: flex;
-        width: 1250px;
-    }
-    .process-container{
-        display: flex;
-        width: 1250px;
-    }
-    .cta-button-container{
-        display: flex;
-        width: 1250px;
-    }
-    .case-coment-ac{
-        display: flex;
-        width: 1240px;
-        margin: 20px;
-        margin-right: 20px;
-    }
-    .contact-container{
-        display: flex;
-        width: 1250px;
-        margin-left: 20px;
-    }
-    .footer{
-        display: flex;
-        width: 1280px;
-    }
-    .footer-main{
-        display: flex;
-        
-    }
-    .menu-toggle {
-        display: block;
-        background: none;
-        border: none;
-        font-size: 24px;
-        cursor: pointer;
+
+    .mobile-menu button {
+    border: none;
+    background: #b9ff66;
+    color: #000;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
     }
 
     .nav {
-        display: none; /* Скрыть меню по умолчанию */
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background-color: white;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
     }
 
     .nav.active {
-        display: block; /* Показать меню при активации */
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+    }
+    .nav-link a{
+        max-width: 100px;
+    }
+    .mobile-image {
+    display: block; /* Показываем только на экранах до 768px */
+    max-width: 100%;
+    height: auto;
+    height: 800px;
+    }
+    .hero-title{
+        font-size: 42px;
+        width: 100%;
+        padding:20px;
+
+    }
+    .hero-content{
+        width: 100%;
+    }
+    .hero{
+        gap: 0px;
+    }
+    .mobile-image{
+        width: 100%;
+        height: 400px;
+    }
+    .hero-text{
+        font-size: 15px;
+        padding: 20px;
+        width: 100%;
+    }
+    .megaphone-illustration{
+        display: none;
+    }
+    .consultation-btn{
+        margin-left: 20px;
+        width: 375px;
+    }
+    .logos{
+        width: 100%;
+        height: 100%;
+        gap: 20px;
+        padding: 0px;
+    }
+    .logo-image{
+        width: 150px;
+    }
+    .container{
+        width: 100%;
+        --gridColumns:1;
+        gap: 0px;
+    }
+    .card.dark{
+        width: 375px;
+        margin: 20px;
+    }
+    .card.light{
+        width: 375px;
+        margin: 20px;
+    }
+    .card.green{
+        width: 375px;
+        margin: 20px;
+    }
+    .img-src-1{
+        width: 160px;
+        margin-right: 80px;
+        padding-top: 100px;
+        position: absolute;
+    }
+    .img-src-2{
+        width: 130px;
+        margin-right: 80px;
+        padding-top: 100px;
+        position: absolute;
+    }
+
+    .card-content{
+        height: 200px;
+    }
+    .learn-more-card{
+        display: none;
+    }
+    .learn-more-card-white{
+        display: none;
+    }
+    .card-text-1-1-cont{
+        font-size: 25px;
+        width: 180px;
+    }
+    .card-text-2-1-cont{
+        font-size: 25px;
+        width: 160px;
+    }
+    .card-text-1-2-cont{
+        font-size: 25px;
+        width: 180px;
+    }
+    .card-text-2-2-cont{
+        font-size: 25px;
+        width: 150px;
+    }
+    .visual-element{
+        display: none;
+    }
+    .containe{
+        margin: 20px;
+    }
+    .case-studies-content{
+        flex-direction: column;
+        height: auto;
+    }
+    .case-study-card{
+        border-right: none;
+        padding-right: 0px;
+    }
+    .case-study-card-2{
+        border-right: none;
+        padding-right: 0px;
+        padding-left: 20px;
+    }
+    .case-study-card-3{
+        border-right: none;
+        padding-right: 0px;
+        padding-left: 20px;
+    }
+    .step.active{
+        width: 100%;
+        height: auto;
+    }
+    .step-content p{
+        display: none;
+    }
+    .content{
+        padding: 0px;
+    }
+    .step-content h3{
+        font-size: 15px;
+        width: 150px;
+        padding: 0px;
+        margin: 0px;
+    }
+    .minus-1{
+        border-bottom: none;
+    }
+    .step-number {
+        font-size: 30px;
+        margin: 0px;
+    }
+    .process-steps .step{
+        padding: 30px;
+    }
+    .team-grid{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .team-container{
+        height: auto;
+    }
+    .cta-button{
+        width: 100%;
+    }
+    .cta-button:hover{
+        width: 100%;
+    }
+
+    .visual-element-contact{
+        display: none;
+    }
+    .contact-container{
+        width: 375px;
+        margin: 20px;
+    }
+    .radio-group{
+        width: 280px;
+    }
+    .contact-form, .contact-form input, .contact-form textarea, .contact-form label, .contact-form button{
+        width: 335px;
+    }
+    .contact-form{
+        padding: 0px;
+    }
+    .form-group.message-group textarea{
+        width: 335px;
+    }
+    .footer-main{
+        width: 100%;
+        height: auto;
+    }
+    .footer-content{
+        flex-direction: column;
+        gap: 50px;
+    }
+    .footer-right form{
+        width:335px;
+        flex-direction: column;
+        padding: 0px;
+        margin: 0px;
+        justify-content: center;
+        align-items: center;
+    }
+    .subscribe-form{
+        width: 335px;
+        align-items: center;
+        justify-content: center;
+    }
+    .footer-shapka-left{
+        flex-direction: column;
+    }
+    .team-member{
+        width: 375px;
+    }
+    .in_inbox{
+        width: 200px;
+    }
+    .member-info p{
+        font-size: 15px;
+    }
+    .case-coment-ac{
+        padding: 20px;
+        margin: 20px;
+    }
+    .case-card-coment p{
+        font-size: 15px;
+    }
+    .form-section{
+        width: 335px;
+    }
+    .footer-right{
+        width: 335px;
+    }
+    .footer-shapka-center-text{
+        flex-direction: column;
+        padding: 0px;
+    }
+    .footer-left p{
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        text-align: center
+    }
+    .footer-left h4{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 100px;
+    }
+    .footer-shapka-right{
+        display: none;
+    }
+    .footer-left-text{
+        width: 335px;
+    }
+    .footer-right input{
+        padding-left: 20px;
+        width: 300px;
+    }
+    .footer-right button{
+        width: 300px;
+    }
+    .footer-bottom{
+        width: 100%;
+    }
+    .services-1{
+        max-width: 335px;
+        flex-direction: column;
+        gap: 30px;
+        justify-content: center;
+        height: 200px;
+    }
+
+    .atourd-1{
+        width: 300px;
+        height: auto;
+        font-size: 15px;
+        text-align: center;
+        padding-left: 50px;
+        margin-left: 80px;
+    }
+    .services-main{
+        height: 205px;
+        width: 335px;   
+    }
+    .services-green{
+        margin-left: 165px;
     }
 }
