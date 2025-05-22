@@ -51,9 +51,11 @@
     align-items: center;
 }
 
+
 .nav a {
     text-decoration: none;
     color: #333;
+    display: flex;
 }
 .nav-link {
     text-decoration: none;
@@ -74,6 +76,7 @@
     background-color: #333;
     color: white;
 }
+
 
 .quote-btn {
     padding: 10px 20px;
@@ -473,13 +476,31 @@ footer {
 }
 .services-4{
     display: flex;  
-    padding-right: 470px;
+    padding-right: 380px;
     height: 45px;
 }
 .services-5{
     display: flex;  
     padding-right: 457px;
     height: 45px;
+}
+button[type="submity"] {
+  border-radius: 2px solid #000000;
+  width: 100%;
+  padding: 14px;
+  background-color: #b9ff66;
+  color: rgb(0, 0, 0);
+  border-radius: 20px;
+  font-size: 20px;
+  cursor: pointer;
+  min-height: 48px;
+  transition: background-color 0.3s ease;
+  font-family: "Space Grotesk";
+    src: url("../fonts/SpaceGrotesk-Regular.ttf");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    margin-top: 20px;
 }
 .services-green {
     display: flex;
@@ -536,7 +557,7 @@ footer {
     font-family: "Space Grotesk", sans-serif;
     font-weight: 500;
     height: 45px;
-    width: 110px; 
+    width: 200px; 
 }
 .services-green-5 {
     display: flex;
@@ -1708,6 +1729,151 @@ p6 {
     white-space: nowrap;
     border: 0;
 }
+.slider-container {
+  max-width: 1235px;
+  height: 625px;
+  margin: auto;
+  padding: 20px;
+  background-color: #1a1a1a;
+  border-radius: 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  align-items: center; /* вертикальное центрирование */
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+  height: 400px;
+  padding: 0 317px; /* Отступы для видимости соседей */
+  box-sizing: border-box;
+}
+
+.slide {
+
+  height: 266px;
+  opacity: 0.6;
+  transition: opacity 0.5s ease-in-out;
+  display: flex;
+  align-items: center; /* центрирование по вертикали */
+  justify-content: center; /* центрирование по горизонтали */
+}
+
+.slide.active {
+  opacity: 1; /* Активный слайд полностью виден */
+}
+
+.comment-box {
+  background-color: #1a1a1a;
+  border-radius: 50px;
+  border: 1px solid #b9ff66;
+  padding: 20px;
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  width: 606px;
+  height: 266px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 40px;
+  align-items: flex-start; /* если текст должен быть слева внутри блока */
+}
+
+.comment-box::before {
+  content: "";
+  position: absolute;
+  margin-left: 30px;
+  bottom: -16px;
+  left: 20px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #b9ff66;
+  border-top: none;
+  border-right: none;
+  transform: rotate(-45deg);
+  background-color: #1a1a1a;
+}
+
+.comment-box p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 25px;
+  color: #ffffff;
+}
+
+.author-info {
+  margin-top: 70px;
+  font-size: 14px;
+  margin-left: 40px;
+}
+
+.name {
+  color: #b9ff66;
+  font-size: 20px;
+  display: grid;
+  font-family: "Space Grotesk";
+    src: url("../fonts/SpaceGrotesk-Medium.ttf");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+.position {
+  color: #aaa;
+  font-size: 18px;
+  font-family: "Space Grotesk";
+    src: url("../fonts/SpaceGrotesk-Regular.ttf");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
+  
+}
+
+#prevBtn{
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #fff;
+  padding: 10px;
+  padding-right: 200px;
+}
+#nextBtn{
+    background-color: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #fff;
+  padding: 10px;
+  padding-left: 200px;
+}
+
+.dots {
+  display: flex;
+  gap: 10px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background-color: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #b9ff66;
+}
 .testimonials-heading{ 
     position: absolute;
     width: 1px;
@@ -1761,32 +1927,28 @@ p6 {
     width: 556px;
     height: 68px;
 }
-.btn-login {
-  display: inline-block;
-  margin: 50px auto;
+#openModalBtn {
   padding: 12px 24px;
+  font-size: 20px;
   background-color: #ffffff;
   color: rgb(0, 0, 0);
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 16px;
-  border:1px solid #000000;
+  transition: background-color 0.3s ease;
+  border: 1px solid #333;
   font-family: "Space Grotesk";
   src: url("../fonts/SpaceGrotesk-Regular.ttf");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
-  font-size:20px;
   height: 50px;
-  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
-  cursor: pointer;
 }
-.btn-login:hover {
+
+#openModalBtn:hover {
   background-color: #000000;
   color: white;
 }
-
 .modal {
   display: none;
   position: fixed;
@@ -1796,43 +1958,43 @@ p6 {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.5);
 }
-
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 40px;
+  cursor: pointer;
+}
+.close:hover {
+  color: black;
+}
+input[type="emaily"],
+input[type="password"] {
+    width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 20px;
+  font-family: "Space Grotesk";
+    src: url("../fonts/SpaceGrotesk-Regular.ttf");
+    font-style: normal;
+    font-display: swap;
+    font-size: 15px;
+    text-decoration-color: #000;
+}
 .modal-content {
   background-color: #fff;
   margin: 10% auto;
   padding: 30px;
-  border-radius: 8px;
-  width: 400px; /* Увеличили ширину */
+  border-radius: 20px;
+  width: 400px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
-
-form input {
-  width: 100%;
-  padding: 12px;
-  margin: 12px 0;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 16px;
-  font-family: "Space Grotesk";
-    src: url("../fonts/SpaceGrotesk-Regular.ttf");
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-}
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
 .case-coment {
     max-width: 1235px;
     margin: auto;
 }
-
 .case-coment h2 {
     color: #8BC34A;
     font-size: 24px;
@@ -1854,14 +2016,11 @@ form input {
 .mobile-str-bw{
     display: none;
 }
-
-
 .case-card-coment {
     flex: 1;
     color: white;
     padding: 20px;
 }
-
 .case-card-coment p {
     font-size: 14px;
     line-height: 1.5;
@@ -1911,8 +2070,41 @@ form input {
   background-color: #000;
   border-radius: 2px;
 }
-
 .mobile-menu {
+  top: 70px;
+  background-color: white;
+  align-items: center;
+  justify-items: right;
+  padding: 20px 0;
+  z-index: 999;
+}
+.mobile-menu.active {
+  display: flex;
+  animation: slideDown 0.3s ease forwards;
+  justify-items: right;
+  border-radius: 10px;
+  background-color: #f7f4f4;
+  width: 375px;
+}
+@keyframes slideDown {
+  from {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@media (max-width: 768px) {
+    .burger-btn {
+    display: flex;
+  }
+
+  .nav {
+    display: none;
+  }
+  .mobile-menu {
   display: none;
   position: absolute;
   top: 70px;
@@ -1930,27 +2122,23 @@ form input {
   animation: slideDown 0.3s ease forwards;
   justify-items: right;
   border-radius: 10px;
-  background-color: #f7f4f4;
+  background-color: #ffffff;
   width: 375px;
+  height: 570px;
+  gap: 28px;
+  margin-top: 40px;
 }
-
-@keyframes slideDown {
-  from {
-    transform: translateY(-10px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
+#loginForm{
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
 }
-@media (max-width: 768px) {
-    /* Общие стили */
     .header-logos {
         display: flex;
-        width: 100%px;
+        width: 100%;
         justify-content: center;
         align-items: center;
+        padding: 20px;
         padding-bottom: 40px;
     }
     .logos{
@@ -1970,45 +2158,7 @@ form input {
     display: none;
     }
 
-    .mobile-menu a,
-    .mobile-menu button {
-    margin: 10px 0;
-    text-align: center;
-    }
-
-    .mobile-menu button {
-    border: none;
-    background: #b9ff66;
-    color: #000;
-    font-size: 16px;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    }
-
-    .nav {
-    position: absolute;
-    top: 70px;
-    left: 0;
-    right: 0;
-    background-color: white;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px 0;
-    transform: translateY(-100%);
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-    }
-
-    .nav.active {
-    transform: translateY(0);
-    opacity: 1;
-    visibility: visible;
-    }
-    .nav-link a{
-        max-width: 100px;
-    }
+   
     .mobile-image {
     display: block; /* Показываем только на экранах до 768px */
     max-width: 100%;
@@ -2040,8 +2190,8 @@ form input {
         display: none;
     }
     .consultation-btn{
-        margin-left: 20px;
-        width: 375px;
+        width: 335px;
+        margin: 20px;
     }
     .logos{
         width: 100%;
@@ -2050,7 +2200,7 @@ form input {
         padding: 0px;
     }
     .logo-image{
-        width: 150px;
+        width: 140px;
     }
     .container{
         width: 100%;
@@ -2058,30 +2208,34 @@ form input {
         gap: 0px;
     }
     .card.dark{
-        width: 375px;
+        width: 335px;
         margin: 20px;
     }
     .card.light{
-        width: 375px;
+        width: 335px;
         margin: 20px;
     }
     .card.green{
-        width: 375px;
+        width: 335px;
         margin: 20px;
     }
     .img-src-1{
-        width: 160px;
-        margin-right: 80px;
+        width: 140px;
         padding-top: 100px;
         position: absolute;
     }
     .img-src-2{
         width: 130px;
-        margin-right: 80px;
+    
         padding-top: 100px;
         position: absolute;
     }
-
+    
+    .card-icon{
+        width: 150px;
+        position: absolute;
+        padding-left: 200px;
+    }
     .card-content{
         height: 200px;
     }
@@ -2174,11 +2328,11 @@ form input {
         display: none;
     }
     .contact-container{
-        width: 375px;
+        width: 335px;
         margin: 20px;
     }
     .radio-group{
-        width: 280px;
+        width: 350px;
     }
     .contact-form, .contact-form input, .contact-form textarea, .contact-form label, .contact-form button{
         width: 335px;
@@ -2190,7 +2344,6 @@ form input {
         width: 335px;
     }
     .footer-main{
-        width: 100%;
         height: auto;
     }
     .footer-content{
@@ -2214,10 +2367,10 @@ form input {
         flex-direction: column;
     }
     .team-member{
-        width: 375px;
+        width: 335px;
     }
     .in_inbox{
-        width: 200px;
+        width: 150px;
     }
     .member-info p{
         font-size: 15px;
@@ -2268,11 +2421,11 @@ form input {
         width: 100%;
     }
     .services-1{
-        max-width: 335px;
         flex-direction: column;
-        gap: 30px;
-        justify-content: center;
-        height: 200px;
+        padding: 0px;
+        height: 150px;
+        gap: 20px;
+        width: 335px;
     }
 
     .atourd-1{
@@ -2280,22 +2433,31 @@ form input {
         height: auto;
         font-size: 15px;
         text-align: center;
-        padding-left: 50px;
-        margin-left: 80px;
+        padding: 0;
+        margin-left: 40px;
+        margin-right: 40px;
     }
     .services-main{
+        display: flex;
+        flex-direction: column;
+        margin: 0px;
+        padding-top: 0px;
+        margin-bottom: 40px;
+        margin-top: 40px;
         height: 205px;
         width: 335px;   
     }
     .services-green{
-        margin-left: 165px;
+        width: 150px;
+        justify-content: center;
+        text-align: center;
+        margin-left: 120px;
     }
     .services-2{
-        max-width: 335px;
         flex-direction: column;
-        gap: 30px;
-        justify-content: center;
-        height: 200px;
+        padding: 0px;
+        height: 150px;
+        gap: 20px;
     }
 
     .atourd-2{
@@ -2303,22 +2465,22 @@ form input {
         height: auto;
         font-size: 15px;
         text-align: center;
-        padding-left: 50px;
-        margin-left: 80px;
+        padding: 0;
+        margin-left: 90px;
+        margin-right: 40px;
     }
-    .services-main{
-        height: 205px;
-        width: 335px;   
-    }
+
     .services-green-2{
-        margin-left: 140px;
+        width: 250px;
+        justify-content: center;
+        text-align: center;
+        margin-left: 110px;
     }
     .services-3{
-        max-width: 335px;
         flex-direction: column;
-        gap: 30px;
-        justify-content: center;
-        height: 200px;
+        padding: 0px;
+        height: 150px;
+        gap: 20px;
     }
 
     .atourd-3{
@@ -2326,22 +2488,23 @@ form input {
         height: auto;
         font-size: 15px;
         text-align: center;
-        padding-left: 50px;
-        margin-left: 80px;
-    }
-    .services-main{
-        height: 205px;
-        width: 335px;   
+        padding: 0;
+        margin-left: 60px;
+        margin-right: 40px;
     }
     .services-green-3{
-        margin-left: 140px;
+        width: 320px;
+        justify-content: center;
+        text-align: center;
+        margin-left: 60px;
+        font-size: 30px;
     }
     .services-4{
-        max-width: 335px;
         flex-direction: column;
-        gap: 30px;
-        justify-content: center;
-        height: 200px;
+        padding: 0px;
+        height: 150px;
+        gap: 20px;
+        width: 375px;
     }
 
     .atourd-4{
@@ -2349,22 +2512,21 @@ form input {
         height: auto;
         font-size: 15px;
         text-align: center;
-        padding-left: 50px;
-        margin-left: 80px;
-    }
-    .services-main{
-        height: 205px;
-        width: 335px;   
+        padding: 0;
+        margin-left: 60px;
+        margin-right: 40px;
     }
     .services-green-4{
-        margin-left: 140px;
+        width: 200px;
+        justify-content: center;
+        text-align: center;
+        margin-left: 110px;
     }
     .services-5{
-        max-width: 335px;
         flex-direction: column;
-        gap: 30px;
-        justify-content: center;
-        height: 200px;
+        padding: 0px;
+        height: 150px;
+        gap: 20px;
     }
 
     .atourd-5{
@@ -2372,14 +2534,83 @@ form input {
         height: auto;
         font-size: 15px;
         text-align: center;
-        padding-left: 50px;
-        margin-left: 80px;
+        padding: 0;
+        margin-left: 70px;
+        margin-right: 40px;
     }
-    .services-main{
-        height: 205px;
-        width: 335px;   
-    }
+    
     .services-green-5{
-        margin-left: 140px;
+        width: 230px;
+        justify-content: center;
+        text-align: center;
+        margin-left: 100px;
     }
+    #nextBtn {
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff;
+    padding-left: 100px;
+    }
+    #prevBtn {
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff;
+    padding: 10px;
+    padding-right: 100px;
+    }
+    .slider {
+    padding: 0;
+    }
+    .comment-box p{
+    font-size: 13px;
+    margin: 20px;
+    }
+    .comment-box{
+        width: 290px;
+        padding: 10px;
+    }
+    .slider-container{
+        margin: 20px;
+        height: 510px;
+    }
+    .name{
+        font-size: 16px;
+    }
+    .position{
+        font-size: 13px;
+    }
+    .author-info{
+        margin-top: 50px;
+    }
+    .controls{
+        margin-top: 20px;
+    }
+    .comment-box{
+        margin-bottom: 100px;
+        margin-left: 0px;
+    }
+    .modal-content{
+        margin: 0px;
+        height: 100%;
+        width: 100%;
+        border-radius: 0px;
+    }
+    .header-logo{
+        padding-right: 20px;
+    }
+    .process-container{
+        margin-bottom: 20px;
+    }
+    .radio-group input[type="radio"]{
+        width: 70px;
+    }
+    input[type="emaily"],
+    input[type="password"] {
+    color: #000;
+    
+}
 }
