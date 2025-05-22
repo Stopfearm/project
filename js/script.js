@@ -1,5 +1,4 @@
-
-        const burgerBtn = document.querySelector('.burger-btn');
+const burgerBtn = document.querySelector('.burger-btn');
   const mobileMenu = document.querySelector('.mobile-menu');
 
   if (burgerBtn && mobileMenu) {
