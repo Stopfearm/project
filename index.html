@@ -10,19 +10,21 @@
 <body class="body-main">
     <header class="header-logos">
         <img src="images/pozitivus.svg" alt="Positivus Logo" class="header-logo">
-        <nav class="nav">
+        <nav class="nav mobile-menu">
             <a href="#about" class="nav-link">About us</a>
             <a href="#services" class="nav-link">Services</a>
             <a href="#cases" class="nav-link">Use Cases</a>
             <a href="#pricing" class="nav-link">Pricing</a>
             <a href="#blog" class="nav-link">Blog</a>
             <button class="quote-btn">Request a quote</button>
-            <button class="btn-login">Entry</button>
-            <div id="loginModal" class="modal">
+            <button id="openModalBtn">Enter</button>
+            <div class="modal" id="loginModal">
                 <div class="modal-content">
+                    <span class="close">&times;</span>
                     <form id="loginForm">
-                        <input type="email" placeholder="Email" required />
+                        <input type="emaily" placeholder="Email" required />
                         <input type="password" placeholder="Password" required />
+                        <button type="submity">Enter</button>
                     </form>
                 </div>
             </div>
@@ -32,23 +34,6 @@
     <span class="burger-line"></span>
     <span class="burger-line"></span>
   </button>
-  <div class="mobile-menu">
-  <a href="#about" class="nav-link">About us</a>
-  <a href="#services" class="nav-link">Services</a>
-  <a href="#cases" class="nav-link">Use Cases</a>
-  <a href="#pricing" class="nav-link">Pricing</a>
-  <a href="#blog" class="nav-link">Blog</a>
-  <button class="btn-login">Entry</button>
-            <div id="loginModal" class="modal">
-                <div class="modal-content">
-                    <form id="loginForm">
-                        <input type="email" placeholder="Email" required />
-                        <input type="password" placeholder="Пароль" required />
-                    </form>
-                </div>
-            </div>
-  <button class="quote-btn">Request a quote</button>
-</div>
 </header>
     </header>
 
@@ -436,7 +421,6 @@
                 </div>
             </div>
         </section>
-        
         <section class="testimonials-section">
             <div class="services-main">
                 <h2 class="testimonials-heading">Testimonials</h2>
@@ -446,23 +430,55 @@
                 </div>
             </div>
             <div class="case-coment">
-                <div class="case-coment-ac">
-                    <div class="case-card-coment">
-                        <p>"We have been working with Positivus for the past year and have seen a significant increase in website traffic and leads as a result of their efforts. The team is professional, responsive, and truly cares about the success of our business. We highly recommend Positivus to any company looking to grow their online presence."</p>
+                <div class="slider-container">
+                    <div class="slider">
+                        <div class="slide active">
+                            <div class="comment-box">
+                                <p class="comment-p">""We have been working with Positivus for the past year and have seen a significant increase in website traffic and leads as a result of their efforts. The team is professional, responsive, and truly cares about the success of our business. We highly recommend Positivus to any company looking to grow their online presence.""</p>
+                                <div class="author-info">
+                                    <span class="name">John Smith</span>
+                                    <span class="position">Marketing Director at XYZ Corp</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="comment-box">
+                                <p>""We have been working with Positivus for the past year and have seen a significant increase in website traffic and leads as a result of their efforts. The team is professional, responsive, and truly cares about the success of our business. We highly recommend Positivus to any company looking to grow their online presence.""</p>
+                                <div class="author-info">
+                                    <span class="name">John Smith</span>
+                                    <span class="position">Marketing Director at XYZ Corp</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="comment-box">
+                                <p>""We have been working with Positivus for the past year and have seen a significant increase in website traffic and leads as a result of their efforts. The team is professional, responsive, and truly cares about the success of our business. We highly recommend Positivus to any company looking to grow their online presence.""</p>
+                                <div class="author-info">
+                                    <span class="name">John Smith</span>
+                                    <span class="position">Marketing Director at XYZ Corp</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="case-card-coment">
-                        <p>"We have been working with Positivus for the past year and have seen a significant increase in website traffic and leads as a result of their efforts. The team is professional, responsive, and truly cares about the success of our business. We highly recommend Positivus to any company looking to grow their online presence."</p>
+                    <div class="controls">
+                        <button id="prevBtn"><</button>
+                        <div class="dots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                        <button id="nextBtn">></button>
                     </div>
                 </div>
             </div>
-        </section>
-        
-        <section class="contact-form-section">
-            <div class="services-main">
-                <h2 class="contact-heading">Contact Us</h2>
+        </div>
+    </section>
+    <section class="contact-form-section">
+        <div class="services-main">
+            <h2 class="contact-heading">Contact Us</h2>
                 <div class="services-4">
-                    <a href="#services" class="services-green-4">Contact</a>
-                    <div class="atourd-4">At our digital marketing agency, we offer a range of services to help businesses grow and succeed online. These services include:</div>
+                    <a href="#services" class="services-green-4">Contact Us</a>
+                    <div class="atourd-4">Hear from Our Satisfied Clients: Read Our Testimonials to Learn More about Our Digital Marketing Services</div>
                 </div>
             </div>
             <div class="contact-container">
@@ -543,7 +559,7 @@
         </div>
     </footer>
     <script>
-  const burgerBtn = document.querySelector('.burger-btn');
+        const burgerBtn = document.querySelector('.burger-btn');
   const mobileMenu = document.querySelector('.mobile-menu');
 
   if (burgerBtn && mobileMenu) {
@@ -552,28 +568,77 @@
     });
   }
 </script>
- <script>
-    const modal = document.getElementById('loginModal');
-    const btnLogin = document.querySelector('.btn-login');
+<script>
+   const modal = document.getElementById('loginModal');
+    const openBtn = document.getElementById('openModalBtn');
+    const closeBtn = document.querySelector('.close');
 
-    // Открытие модального окна
-    btnLogin.addEventListener('click', () => {
+    openBtn.addEventListener('click', () => {
       modal.style.display = 'block';
     });
-
-    // Закрытие по клику вне окна
+    closeBtn.addEventListener('click', () => {
+      modal.style.display = 'none';
+    });
     window.addEventListener('click', (e) => {
       if (e.target === modal) {
         modal.style.display = 'none';
       }
     });
-
-    // Можно добавить логику отправки формы
     document.getElementById('loginForm').addEventListener('submit', function(e) {
       e.preventDefault();
-      alert('Данные успешно отправлены!');
+      alert('Вы успешно вошли!');
       modal.style.display = 'none';
     });
-  </script>
+</script>
+<script>document.addEventListener('DOMContentLoaded', function () {
+  const slides = document.querySelectorAll('.slide');
+  const dots = document.querySelectorAll('.dot');
+  const slider = document.querySelector('.slider');
+  let currentIndex = 0;
+
+  // Ширина одного слайда
+  const slideWidth = slides[0].offsetWidth;
+
+  function showSlide(index) {
+    // Перемещаем слайдер на нужное место
+    slider.style.transform = `translateX(-${index * slideWidth}px)`;
+
+    // Обновляем активные классы
+    slides.forEach((slide, i) => {
+      slide.classList.remove('active');
+      if (i === index) {
+        slide.classList.add('active');
+      }
+    });
+
+    dots.forEach((dot, i) => {
+      dot.classList.remove('active');
+      if (i === index) {
+        dot.classList.add('active');
+      }
+    });
+  }
+
+  document.getElementById('prevBtn').addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+    showSlide(currentIndex);
+  });
+
+  document.getElementById('nextBtn').addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % slides.length;
+    showSlide(currentIndex);
+  });
+
+  // Добавляем клик по точкам
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+      currentIndex = index;
+      showSlide(currentIndex);
+    });
+  });
+
+  // Инициализация
+  showSlide(currentIndex);
+});</script>
 </body>
 </html>
