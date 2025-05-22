@@ -25,9 +25,12 @@
     box-sizing: border-box;
     font-family: 'Space Grotesk', sans-serif;
 }
-
-
-
+.subscribe-knop{
+    background-color: #000;
+}
+.footer-right button{
+    background-color: #000;
+}
 .header-logos {
     display: flex;
     justify-content: center;
@@ -398,13 +401,14 @@ footer {
 
 .footer-right button {
     padding-left: 10px;
+    width: 200px;
     padding-right: 10px;
     background-color: #b9ff66;
     font-size: 20px;
     border: none;
-    border-radius: 8px;
+    border-radius: 15px;
     cursor: pointer;
-    color: black;
+    color: rgb(0, 0, 0);
      /* Размер текста как в input */
     font-weight: bold; /* Жирный шрифт */
     height: 67px; /* Такая же высота, как у input */
@@ -484,7 +488,7 @@ footer {
     padding-right: 457px;
     height: 45px;
 }
-button[type="submity"] {
+button[type="submit"] {
   border-radius: 2px solid #000000;
   width: 100%;
   padding: 14px;
@@ -500,7 +504,7 @@ button[type="submity"] {
     font-weight: 400;
     font-style: normal;
     font-display: swap;
-    margin-top: 20px;
+
 }
 .services-green {
     display: flex;
@@ -1644,6 +1648,7 @@ p6 {
     width: 556px;
     height: 190px;
     padding: 10px;
+    margin-bottom: 20px;
     border: 1px solid #000000;
     border-radius: 10px;
     resize: none;
@@ -1896,7 +1901,7 @@ p6 {
     white-space: nowrap;
     border: 0;
 }
-.submit-button {
+.submity-button {
     background-color: #2d2d2d;
     color: white;
     padding: 12px 24px;
@@ -1970,7 +1975,7 @@ p6 {
 .close:hover {
   color: black;
 }
-input[type="emaily"],
+input[type="email"],
 input[type="password"] {
     width: 100%;
   padding: 10px;
@@ -2036,10 +2041,14 @@ input[type="password"] {
 .contact-form,
 .contact-form input,
 .contact-form textarea,
-.contact-form label,
-.contact-form button {
+.contact-form label {
     font-family: "Space Grotesk", sans-serif;
     font-weight: 400;
+}
+.contact-form button{
+    background-color: #1a1a1a;
+    color: #ffffff;
+    width: 556px;
 }
 .contact-form .form-group label {
     display: block;
@@ -2334,6 +2343,9 @@ input[type="password"] {
     .radio-group{
         width: 350px;
     }
+    .footer{
+        width: 386px;
+    }
     .contact-form, .contact-form input, .contact-form textarea, .contact-form label, .contact-form button{
         width: 335px;
     }
@@ -2345,6 +2357,9 @@ input[type="password"] {
     }
     .footer-main{
         height: auto;
+        width: 100%;
+        margin: 0px;
+        border-radius: 0px;
     }
     .footer-content{
         flex-direction: column;
@@ -2576,6 +2591,7 @@ input[type="password"] {
     .slider-container{
         margin: 20px;
         height: 510px;
+        width: 335px;
     }
     .name{
         font-size: 16px;
@@ -2611,6 +2627,6 @@ input[type="password"] {
     input[type="emaily"],
     input[type="password"] {
     color: #000;
-    
+
 }
 }
